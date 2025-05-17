@@ -7,9 +7,9 @@ from sklearn.neighbors import NearestNeighbors
 import matplotlib.pyplot as plt
 
 # 1. Cargar y preprocesar el conjunto de datos Auto MPG
-url = "http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data"
+#url = "http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data"
 column_names = ['mpg', 'cylinders', 'displacement', 'horsepower', 'weight', 'acceleration', 'model_year', 'origin']
-data = pd.read_csv(url, names=column_names, na_values='?', comment='\t', sep=' ', skipinitialspace=True)
+data = data = pd.read_csv("auto-mpg.data", names=column_names, na_values='?', comment='\t', sep=' ', skipinitialspace=True)
 
 # Manejar valores faltantes
 data = data.dropna()
